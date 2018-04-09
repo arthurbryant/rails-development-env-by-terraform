@@ -8,9 +8,9 @@ provider "aws" {
 resource "aws_instance" "main" {
   ami           = "ami-56d4ad31"
   instance_type = "t2.micro"
-  key_name = "key-pair-production"
-  vpc_security_group_ids = ["sg-8cd579f5"]
-  subnet_id = "subnet-be5cbae7"
+  key_name = "YOUR-DEVELOPMENT-KEY-PAIR"
+  vpc_security_group_ids = ["YOUR-SECURITY-GROUP"]
+  subnet_id = "YOUR-SUBNET"
   associate_public_ip_address = true
   disable_api_termination = true
 
@@ -22,7 +22,7 @@ resource "aws_instance" "main" {
   count = "${var.count}"
   tags {
     Name = "${format("goal-${var.env}-%03d", count.index + 1)}",
-    Stages = "production",
+    Stages = "development",
     Project = "goal",
     Roles = "app,db"
   }

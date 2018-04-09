@@ -5,7 +5,4 @@
 # Module directory
 .terraform/
 
-# aws variables file
-production/terraform.tfvars
-
 .idea

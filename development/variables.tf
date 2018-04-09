@@ -5,7 +5,7 @@ variable "aws_region" {
 }
 
 variable "ssh_private_key" {
-    default = "~/.ssh/feng/key-pair-production.pem"
+    default = "~/.ssh/feng/YOUR-DEVELOPMENT-KEY-PAIR.pem"
 }
 
 variable "count" {
@@ -13,5 +13,5 @@ variable "count" {
 }
 
 variable "env" {
-    default = "pro"
+    default = "dev"
 }
